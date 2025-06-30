@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rice Type Classification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            text-align: center;
+        }
+
+        header {
+            background: black;
+            color: white;
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .nav a:hover {
+            color: green;
+        }
+
+        #upload-section {
+            margin-top: 80px;
+            padding: 100px;
+            background-color: white;
+
+        }
+
+        #detection-section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+            padding: 50px;
+            background: white;
+        }
+
+        #detection-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .info img {
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        .details {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>RICE TYPE CLASSIFICATION</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="contact.html">Contact</a>
+            <a href="#predict">Predict</a>
+        </nav>
+    </header>
+
+    <!-- First Section -->
+    <section id="upload-section">
+        <h2>Upload Your Image</h2>
+        <form>
+            <input type="file" id="imageUpload">
+            <form class="upload-form" action="/predict" method="post" enctype="multipart/form-data"></form>
+            <input type="file" name="image" required>
+            <button type="submit">Upload</button>
+        </form>
+    </section>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const detectionSection = document.getElementById("detection-section");
+
+            window.addEventListener("scroll", function() {
+                const sectionPos = detectionSection.getBoundingClientRect().top;
+                const screenPos = window.innerHeight / 1.3;
+
+                if (sectionPos < screenPos) {
+                    detectionSection.classList.add("visible");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

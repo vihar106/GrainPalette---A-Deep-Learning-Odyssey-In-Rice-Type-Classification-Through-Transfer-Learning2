@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rice Type Classification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .header {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .navbar {
+            background: black;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+        .navbar a:hover {
+            color: green;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+        .content {
+            max-width: 600px;
+            padding-left: 20px;
+        }
+        img {
+            width: 500px;
+            border-radius: 10px;
+        }
+        .info-box {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .info-box div {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .icon {
+            color: green;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">RICE TYPE DETECTION</div>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <a href="#">Testimonials</a>
+        <a href="contact.html">Contact</a>
+        <a href="details.html">Predict</a>
+    </div>
+    <div class="container">
+        <img src="upload.jpg" alt="Rice Farming">
+        <div class="content">
+            <h2>About the Rice Type Classification Model</h2>
+            <p>This model is built using Convolutional Neural Network and trained on labelled images of rice.
+               This model takes image of rice grain as input and gives its prediction for the type of rice.</p>
+            <div class="info-box">
+                <div><span class="icon">📊</span><b>Accuracy of the Model</b> <br>The model gives right prediction 97 times out of 100.</div>
+                <div><span class="icon">📁</span><b>Dataset used</b> <br>The dataset of labelled images is obtained from Kaggle.</div>
+                <div><span class="icon">🍚</span><b>Different Types of Rice</b> <br>This model is capable of checking for 5 different rice types.</div>
+                <div><span class="icon">🛠️</span><b>Technical Architecture</b> <br>The model is trained on MobileNetv4 Architecture using Transfer Learning.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
