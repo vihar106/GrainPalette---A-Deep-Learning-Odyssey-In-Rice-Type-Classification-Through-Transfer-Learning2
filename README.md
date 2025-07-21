@@ -1,1 +1,1 @@
-GrainPalette---A-Deep-Learning-Odyssey-In-Rice-Type-Classification-Through-Transfer-Learning2
+# grainpalette---a-deep-learning-odyssey-in-rice-type-classification-through-transfer-learning
